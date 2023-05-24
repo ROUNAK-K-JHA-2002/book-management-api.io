@@ -6,6 +6,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// Function for sending and recieving responses to Routes
 var RegisterBookStoreRoutes = func(router *mux.Router) {
 	router.HandleFunc("/book/", controllers.CreateBook).Methods("POST")
 	router.HandleFunc("/book/", controllers.GetBooks).Methods("GET")
