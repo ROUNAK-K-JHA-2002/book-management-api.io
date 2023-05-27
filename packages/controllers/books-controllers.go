@@ -58,7 +58,7 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("Error while Parsing")
 	}
-	bookDetails, _ := models.GetBookById(ID) //fetching book from db bu id
+	bookDetails, db := models.GetBookById(ID) //fetching book from db bu id
 	if UpdateBook.Name != "" {
 		bookDetails.Name = UpdateBook.Name
 	}
@@ -68,6 +68,7 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	if UpdateBook.Publication != "" {
 		bookDetails.Publication = UpdateBook.Publication
 	}
+	db.Save(&bookDetails)
 	res, _ := json.Marshal(bookDetails)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
