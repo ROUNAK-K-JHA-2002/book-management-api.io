@@ -11,7 +11,7 @@ var (
 	db *gorm.DB //Making a variable Db pointing towards gorm.db
 )
 
-func connectToDb() {
+func ConnectToDb() {
 	d, err := gorm.Open("mysql", "rounak@Rounak@00/simplerest?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
