@@ -16,7 +16,7 @@
 ## API Reference
 
 #### --Get all Books
-```http
+```
   GET /book/
 ```
 | Parameter | Type     | Description                |
@@ -25,7 +25,7 @@
 
 
 #### --Add a book to DB
-```http
+```
   POST /book/
 ```
 Body to be sent in raw JSON format
@@ -37,7 +37,7 @@ Body to be sent in raw JSON format
 
 
 #### --Get a specific book
-```http
+```
   GET /book/${bookId}/
 ```
 | Parameter | Type     | Description                       |
@@ -46,7 +46,7 @@ Body to be sent in raw JSON format
 
 
 #### --Update a specific book
-```http
+```
   PUT /book/${bookId}
 ```
 
@@ -63,7 +63,7 @@ Body to be sent in raw JSON format
 
 
 #### --Delete a specific book
-```http
+```
   DELETE /book/${bookId}
 ```
 
